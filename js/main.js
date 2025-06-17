@@ -137,6 +137,9 @@ function displayArena() {
 function updateDisplayHp(element, target) {
     const hpNumber = target.querySelector('.hp__info');
     hpNumber.textContent = `💖 ${element.hp} / ${element.hpMax}`
+    if (element.hp === 0) {
+        target.classList.add('hero__card--is-dead')
+    }
 }
 
 // == 💛💛 Event listener pour sélectioner les avatars
